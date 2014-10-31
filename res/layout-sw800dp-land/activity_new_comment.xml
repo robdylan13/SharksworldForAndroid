@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    tools:context="za.co.sharksworld.android.v2.NewCommentActivity" >
+
+   
+<TextView
+        android:id="@+id/newCommentDialogHeaderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/comment_dialog_header"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/newCommentReplyToTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/newCommentDialogHeaderTextView"
+    android:layout_margin="5dp" />
+
+<EditText
+    android:id="@+id/editTextCommentContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/newCommentDialogHeaderTextView"
+    android:layout_below="@+id/newCommentReplyToTextView"
+    android:layout_margin="5dp"
+   android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+    android:lines="3" 
+    android:minLines="3" 
+    android:gravity="top|left" 
+    android:scrollbars="vertical">
+
+    <requestFocus />
+</EditText>
+<LinearLayout
+        android:id="@+id/commentButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCommentContent"
+        android:layout_margin="@dimen/button_margin"
+        style="?android:attr/buttonBarStyle" >
+
+        <Button
+            android:id="@+id/buttonDoComment"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_margin"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="onPostCommentButton"
+            android:text="@string/button_comment_label"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonCancelComment"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_margin"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="onCancelButton"
+            android:text="@string/button_cancel_label"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

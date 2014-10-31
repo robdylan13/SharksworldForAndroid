@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="za.co.sharksworld.android.PostActivity" >
+
+    <item
+        android:id="@+id/menuComment"
+        android:icon="@drawable/ic_action_chat"
+        android:title="@string/new_comment"
+        android:showAsAction="ifRoom"
+        android:visible="false" android:orderInCategory="1">
+    </item>
+
+</menu>

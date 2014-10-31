@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+<TextView
+        android:id="@+id/textViewNoComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/button_margin"
+         />
+    <Button
+        android:id="@+id/buttonExpandComments"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/prev_comm_button_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textViewNoComments"
+        android:layout_margin="@dimen/button_margin"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/prev_comments"
+        android:textColor="#666666" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/commentListViewSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonExpandComments" >
+
+        <ListView
+            android:id="@+id/listViewComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    
+
+</RelativeLayout>
